@@ -14,8 +14,13 @@ using UnityEngine.UI;
     using System.Net;
 #endif
 
+
+
+
 public class FirstPersonController : MonoBehaviour
 {
+    
+
     private Rigidbody rb;
 
     #region Camera Movement Variables
@@ -466,10 +471,11 @@ public class FirstPersonController : MonoBehaviour
         {
             rb.AddForce(0f, jumpPower, 0f, ForceMode.Impulse);
             isGrounded = false;
+
         }
 
         // When crouched and using toggle system, will uncrouch for a jump
-        if(isCrouched && !holdToCrouch)
+        if (isCrouched && !holdToCrouch)
         {
             Crouch();
         }
